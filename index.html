@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <title> India Covid-19 Monitor</title>
+<link rel = "icon" href = "logo.png" type = "image/x-icon"> 
+        
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+
+
+	<style type="text/css">
+
+{
+    
+    font-family: 'Montserrat', sans-serif;
+}
+
+.site-header {
+    width: 100%;
+    height: 100%;
+
+}
+
+#logocovid{
+           width: 100px;
+           position: relative;
+           top: 35px;
+           float: left;
+
+}
+#logocovid:hover {opacity: 1}
+
+
+nav{
+    width: 100%; height: 100px;
+    /*background-color:  red;*/
+    display: flex; color: white;
+    
+}
+
+.logo{
+    width: 60%;
+    height: 100px;
+}
+
+.logo h1{
+    line-height: 100px;
+    padding-left: 50px;
+    font-size: 250%;
+     
+}
+
+#title{
+	text-decoration: none;
+	color: white;
+opacity: 0.8;
+  transition: 0.3s;
+	}
+  #title:hover {opacity: 2}
+
+
+.menu{
+
+    width: 25%; height: 100px;
+}
+
+.menu ul{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items:  center;
+}
+
+.menu ul li{
+    list-style: none;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#link{
+
+	text-decoration: none;
+	color: white;
+}
+
+
+
+#id1{
+         margin-top:100px; 
+         width: 50%;
+         height: 750px;
+         
+         float: left;
+         
+
+
+		}
+		.id2{
+			margin-top:300px;
+         width: 50%;
+         height: 750px;
+         
+   
+         float: left;
+		}
+
+		.table{
+    width: 5%;
+	margin-left:auto; 
+    margin-right:auto;
+    border-spacing: 15px;
+
+}
+#foot{
+  position: relative;
+  top:17px;
+  
+  font-size: 1vw;
+}
+
+	
+ 
+#con {
+
+
+  background-color: #EF8321;
+  color: white;
+  border-radius: 15px;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+#con:hover {opacity: 1}
+
+  #act {
+  background-color: #85CEF2;
+  color: white;
+  border-radius: 15px;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+#act:hover {opacity: 1}
+#rec {
+  background-color: #267859;
+  color: white;
+  border-radius: 15px;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+#rec:hover {opacity: 1}
+#death {
+  background-color: #4581CA;
+  color: white;
+  border-radius: 15px;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+#death:hover {opacity: 1}
+
+#con1 {
+   padding: 40px;
+  background-color: #EF8321;
+  color: white;
+  border-radius: 10px;
+  font-size: 250%;
+  font-weight: bold;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+#con1:hover {opacity: 1}
+  #act1 {
+  background-color: #85CEF2;
+  color: white;
+  border-radius: 10px;
+  font-size: 250%;
+  font-weight: bold;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+#act1:hover {opacity: 1}
+#rec1 {
+  background-color: #267859;
+  color: white;
+  border-radius: 10px;
+  font-size: 250%;
+  font-weight: bold;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+#rec1:hover {opacity: 1}
+#death1 {
+  background-color: #4581CA;
+  color: white;
+  border-radius: 10px;
+  font-size: 250%;
+  font-weight: bold;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+#death1:hover {opacity: 1}
+
+#cancelalign{
+
+}
+
+.update{
+     width: 300px;
+     margin-left: auto;
+
+	
+}
+
+#safe {
+  white-space: nowrap;
+  overflow: hidden;    
+  font-family: 'Source Code Pro', monospace;  
+  font-size: 40px;
+  text-align: center;
+  color: rgba(255,255,255,.70);
+}
+
+/* Animation */
+#safe {
+  animation: animated-text 2s steps(30,end) 1s 1 normal both;
+}
+body{
+   margin: 0;
+   padding: 0;
+	background: #0f8a9d;
+    background: linear-gradient(57deg, #00C6A7 , #1E4D92 )
+}
+
+
+
+
+	
+#home{
+	opacity: 0.8;
+ transition: 0.3s;
+
+}
+#home:hover {
+  opacity: 1;
+}
+
+
+#about{
+	opacity: 0.8;
+ transition: 0.3s;
+
+}
+#about:hover {
+  opacity: 1;
+}
+.update{
+     width: 300px;
+     margin-left: auto;
+
+	
+}
+
+
+
+#footer{
+	text-align: center;
+}
+section{
+	display: block;
+	overflow: hidden;
+}
+
+
+	#id1{
+         position: relative;
+         margin:0px;  
+         padding: 0;
+         width: 50%;
+         height: 750px;
+         
+
+		}
+
+
+     .id2{
+     position: relative;
+	     top:-100px;
+         width: 48%;
+         height: 400px;
+         
+         border-radius: 30px;
+        
+         }
+
+
+
+
+
+#footdiv{
+margin-bottom:0; 
+width: 100%;
+height: 50px;
+background-color: white;
+
+}
+
+
+@media only screen and (max-width: 1239px) {
+
+#id1{
+         position: relative;
+         margin-top:100px;  
+         padding: 0;
+         
+         
+		}
+		#id1 img{
+			max-width: 200% ;
+		}
+
+
+     .id2{
+     position: relative;
+	     top: -650px;
+         width: 100%;
+         height:-0px;
+
+         
+         }
+
+         	.table {
+    table-layout: fixed;
+	
+    width: 100%;
+    border-spacing: 15px;
+
+}
+
+    .fade{
+    	text-align: center;
+            font-size: 2vw;
+            table-layout: fixed;
+
+    }
+    #rec1{
+    	font-size: 4vw;
+    }
+
+    #con1{
+    	font-size: 4vw;
+    }
+    #death1{
+    	font-size: 4vw;
+    }
+    #act1{
+    	font-size: 4vw;
+    }
+
+    #safe{
+    	font-size: 5vw;
+    }
+  .update{
+  	width: 100%;
+  font-size: 4vw;
+  	text-align: center;
+  }
+
+  #home{
+  	 font-size: 2vw;
+  }
+  #about{
+  	 font-size: 2vw;
+  }
+
+  #title{
+
+  	 font-size: 3.7vw;
+  }
+#footdiv{
+margin-bottom:0; 
+width: 100%;
+height: 50px;
+background-color: white;
+
+}
+#foot{
+  position: relative;
+  top:19px;
+  
+  font-size: 3vw;
+}
+
+
+  
+}
+
+
+
+
+	</style>
+</head>
+<body>
+
+<header class="site-header clearfix">
+ <nav>
+  <div class="logo">
+  	 <img id="logocovid" src="logo.png">
+  	
+   <h1 > <a id="title" href="index.html">  India Covid-19 Monitor </a> </h1>
+  </div>
+
+
+  <div class="menu"> 
+   <ul>
+   	<li></li>
+   	<li></li>
+   	<li></li>
+   	<li></li>
+   	<li></li>
+    <li id="home"> <a id="link" href="index.html">Home</a></li>
+    <li id="about"> <a id="link" href="about.html">About </a></li> 
+   </ul>
+  </div>
+ </nav>
+ </header>
+<section>
+	<div id="id1">
+		
+<img src="StayHome.png">;
+
+
+	</div>
+	<div class="id2">
+		
+		<p id="safe"></p>
+    <table class="table" border="0" cellspacing="0" cellpadding="20">
+	
+		<tr>
+		<th class="fade" id="con">CONFIRMED</th>
+		<th class="fade" id="act">ACTIVE</th>
+		<th class="fade"id="rec">RECOVERED</th>
+		<th class="fade"id="death">DEATH</th>
+		</tr>
+		<tr>
+
+			<td class="fade"id="con1"></td>
+			<td class="fade"id="act1"></td>
+			<td class="fade"id="rec1"></td>
+			<td class="fade"id="death1"></td>
+		</tr>
+	</table>
+	
+	<div class="update">Last updated : <span id="last"></span></div>
+	</div>
+
+</section>
+
+
+	<script type="text/javascript">
+function request () {
+	var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+       var data = JSON.parse(xhttp.responseText);   
+         var date =   data[0].Date; 
+
+
+          document.getElementById("con1").innerHTML = data[0].Confirmed;
+          document.getElementById("act1").innerHTML = data[0].Active;
+          document.getElementById("rec1").innerHTML = data[0].Recovered;
+          document.getElementById("death1").innerHTML = data[0].Deaths;
+          document.getElementById("last").innerHTML = date;     
+    }
+};
+xhttp.open("GET", 'https://api.covid19api.com/live/country/india', true);
+xhttp.send();
+}
+request();
+
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function dispaly() {
+	for(var i=0 ; i<26 ; i++)
+	{	
+		var arry = ["AVOID CROWD", "BEWARE OF FAKE NEWS", "CLEAN YOUR HANDS","DON'T GO OUT","EMTY THE STREETS","FEED THE PETS","GATHERING IS BAD","HAND SANITIZING","INSIDE THE HOME","JOIN FIGHT AGAINST CORONA","KIND TO THE NEEDY","LOVE YOUR FAMILY","MEDIDATE DAILY","NO TO HANDSHAKES","OFFER HELP TO EACH OTHER","PRACTICE YOUR PASSION","QUARANTINE YOURSELF","REGULAR EXERCISING","SOCIAL DISTANCING","TRAVELING IS DANGEROUS","USE MASKS","VISIT YOUR DOCTOR ONLINE","WEAPONIZED IMMUNE SYSTEM","XTRA PRECAUTIONS FOR ELDERS","YOUR AWARNESS IS A PREVENTION","ZERO FACE TOUCHING"];
+document.getElementById("safe").innerHTML = arry[i];
+ await sleep(3000);
+    }
+    dispaly();
+ 
+
+}
+
+dispaly();
+
+
+
+
+</script>
+
+
+
+
+
+
+</body>
+<div id="footdiv">
+<footer id="footer">
+  <p id="foot" > ©COVID-19 INDIA.By AMINUL. Contact information: <a href="https://www.linkedin.com/in/aminul-islam-/">
+  Linkedin</a></p>
+</footer>
+</div>
+</html>

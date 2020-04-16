@@ -334,6 +334,15 @@ background-color: white;
 
 
   }
+  #loc{
+    text-align: center;
+    
+    margin-bottom: 0px;
+    font-size: 30px; 
+    font-weight: bold;
+    color: rgba(255,255,255,.70);
+
+  }
 
 
 
@@ -478,6 +487,7 @@ background-color: white;
 	<div class="id2">
 		
 		<p id="safe"></p>
+    <p id="loc"> HII </p>
     <table class="table" border="0" cellspacing="0" cellpadding="20">
 	
 		<tr>
@@ -597,7 +607,7 @@ update();
 
             
 
-
+                       var uper = data1['statewise'][input].state
 
 
          
@@ -607,6 +617,7 @@ update();
           //document.getElementById("act1").innerHTML = data[number-1].Active;
           document.getElementById("rec1").innerHTML = data1['statewise'][input].recovered;
           document.getElementById("death1").innerHTML = data1['statewise'][input].deaths;
+          document.getElementById("loc").innerHTML = uper.toUpperCase();
          document.getElementById("last").innerHTML = jsondate;  
 
 

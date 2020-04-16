@@ -481,11 +481,13 @@ background-color: white;
 			<td class="fade"id="death1"></td>
 		</tr>
 	</table>
+  <div id="mobile">
   <select  id="select" >
     
     
   </select>
-	
+	</div>
+
 	<div class="update">Last updated : <span id="last"></span></div>
 
 	</div>
@@ -566,7 +568,7 @@ update();
             
           }
           //alert(fixed);
-          document.getElementById("select").onclick = function(){
+          document.getElementById("mobile").onclick = function(){
           
         input = document.getElementById("select").value; 
         update();

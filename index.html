@@ -468,21 +468,21 @@ xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
        var data1 = JSON.parse(xhttp.responseText);   
          
-                    var jsondate = data1.lastOriginUpdate;
+                    var jsondate = data1['statewise']['0'].lastupdatedtime;
                      
-                        var date = new Date(jsondate);
+                     
           
           
           
           
-          document.getElementById("con1").innerHTML = data1['data']['summary'].total;
+          document.getElementById("con1").innerHTML = data1['statewise']['0'].confirmed;
           //document.getElementById("act1").innerHTML = data[number-1].Active;
-          document.getElementById("rec1").innerHTML = data1['data']['summary'].discharged;
-          document.getElementById("death1").innerHTML = data1['data']['summary'].deaths;
-          document.getElementById("last").innerHTML = date;     
+          document.getElementById("rec1").innerHTML = data1['statewise']['0'].recovered;
+          document.getElementById("death1").innerHTML = data1['statewise']['0'].deaths;
+         document.getElementById("last").innerHTML = jsondate;     
     }
 };
-xhttp.open("GET", 'https://api.rootnet.in/covid19-in/stats/latest', true);
+xhttp.open("GET", 'https://api.covid19india.org/data.json', true);
 xhttp.send();
 }
 request();

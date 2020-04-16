@@ -309,6 +309,20 @@ background-color: white;
 
 }
 
+#select{
+    width: 150px;
+    border-radius: 20px;
+    margin-left:400px; 
+    margin-top:10px; 
+    margin-bottom:10px; 
+    color: white;
+    background-color:#267859 ;
+
+
+
+  }
+
+
 
 @media only screen and (max-width: 1239px) {
 
@@ -394,10 +408,23 @@ background-color: white;
   
   font-size: 3vw;
 }
+#select{
+    width: 150px;
+    border-radius: 20px;
+    margin-left:150px; 
+    margin-top:10px; 
+    margin-bottom:10px; 
+    color: white;
+    background-color:#267859 ;
+
+
+
+  }
 
 
   
 }
+
 
 
 
@@ -454,58 +481,134 @@ background-color: white;
 			<td class="fade"id="death1"></td>
 		</tr>
 	</table>
+  <select  id="select" >
+    
+    
+  </select>
 	
 	<div class="update">Last updated : <span id="last"></span></div>
+
 	</div>
 
 </section>
 
 
-	<script type="text/javascript">
-function request () {
-	var xhttp = new XMLHttpRequest();
-xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-       var data1 = JSON.parse(xhttp.responseText);   
-         
-                    var jsondate = data1['statewise']['0'].lastupdatedtime;
-                     
-                     
-          
-          
-          
-          
-          document.getElementById("con1").innerHTML = data1['statewise']['0'].confirmed;
-          //document.getElementById("act1").innerHTML = data[number-1].Active;
-          document.getElementById("rec1").innerHTML = data1['statewise']['0'].recovered;
-          document.getElementById("death1").innerHTML = data1['statewise']['0'].deaths;
-         document.getElementById("last").innerHTML = jsondate;     
-    }
-};
-xhttp.open("GET", 'https://api.covid19india.org/data.json', true);
-xhttp.send();
-}
-request();
 
+
+
+	<script type="text/javascript">
+
+
+
+
+
+
+
+window.onload = function() {
+
+ 
 
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
-}
+};
 
 async function dispaly() {
-	for(var i=0 ; i<26 ; i++)
-	{	
-		var arry = ["AVOID CROWD", "BEWARE OF FAKE NEWS", "CLEAN YOUR HANDS","DON'T GO OUT","EMTY THE STREETS","FEED THE PETS","GATHERING IS BAD","HAND SANITIZING","INSIDE THE HOME","JOIN FIGHT AGAINST CORONA","KIND TO THE NEEDY","LOVE YOUR FAMILY","MEDIDATE DAILY","NO TO HANDSHAKES","OFFER HELP TO EACH OTHER","PRACTICE YOUR PASSION","QUARANTINE YOURSELF","REGULAR EXERCISING","SOCIAL DISTANCING","TRAVELING IS DANGEROUS","USE MASKS","VISIT YOUR DOCTOR ONLINE","WEAPONIZED IMMUNE SYSTEM","XTRA PRECAUTIONS FOR ELDERS","YOUR AWARNESS IS A PREVENTION","ZERO FACE TOUCHING"];
+  for(var i=0 ; i<26 ; i++)
+  {
+    var arry = " ";
+    var arry = ["AVOID CROWD", "BEWARE OF FAKE NEWS", "CLEAN YOUR HANDS","DON'T GO OUT","EMTY THE STREETS","FEED THE PETS","GATHERING IS BAD","HAND SANITIZING","INSIDE THE HOME","JOIN FIGHT AGAINST CORONA","KIND TO THE NEEDY","LOVE YOUR FAMILY","MEDIDATE DAILY","NO TO HANDSHAKES","OFFER HELP TO EACH OTHER","PRACTICE YOUR PASSION","QUARANTINE YOURSELF","REGULAR EXERCISING","SOCIAL DISTANCING","TRAVELING IS DANGEROUS","USE MASKS","VISIT YOUR DOCTOR ONLINE","WEAPONIZED IMMUNE SYSTEM","XTRA PRECAUTIONS FOR ELDERS","YOUR AWARNESS IS A PREVENTION","ZERO FACE TOUCHING"];
 document.getElementById("safe").innerHTML = arry[i];
  await sleep(3000);
     }
     dispaly();
  
 
-}
+};
 
 dispaly();
 
+function request () {
+	var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+       var data1 = JSON.parse(xhttp.responseText);   
+         
+                   var fixed = -1 ;
+var input =  0;
+update();
+
+         
+         
+         var total =data1['statewise'].length;
+        //alert(total);
+          
+          
+          for(var i=0 ; i<data1['statewise'].length; i++)
+          {
+             fixed++;
+                
+               var allstates = data1['statewise'][i].state;
+            
+            if(fixed < total)
+            {
+              
+              var e = fixed;
+              var newe = "'"  +fixed + "'";
+              
+             
+              
+               
+           document.getElementById("select").innerHTML  += "<option value ="+ newe + ">"  + allstates + "</option";
+           
+                   }
+
+           //console.log(document.getElementById("select").innerHTML);
+            
+          }
+          //alert(fixed);
+          document.getElementById("select").onclick = function(){
+          
+        input = document.getElementById("select").value; 
+        update();
+
+        //console.log(input);
+
+
+          
+
+         }  
+
+         function update(){
+
+            
+
+
+
+
+         
+                    var jsondate = data1['statewise']['0'].lastupdatedtime;
+          
+          document.getElementById("con1").innerHTML = data1['statewise'][input].confirmed;
+          //document.getElementById("act1").innerHTML = data[number-1].Active;
+          document.getElementById("rec1").innerHTML = data1['statewise'][input].recovered;
+          document.getElementById("death1").innerHTML = data1['statewise'][input].deaths;
+         document.getElementById("last").innerHTML = jsondate;  
+
+
+}
+}
+
+};
+
+xhttp.open("GET", 'https://api.covid19india.org/data.json', true);
+xhttp.send();
+
+
+
+
+}
+request();
+}
 
 
 
